@@ -60,10 +60,11 @@ export const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className="hidden lg:block mx-auto items-center col-span-3 text-sm text-thin space-x-12">
-          {links.map((item) => {
+          {links.map((item, key) => {
             const isActive = pathname === item.href;
             return (
               <Link
+                key={item.href}
                 className={
                   isActive
                     ? "px-4 py-2 bg-white rounded-full"
