@@ -112,6 +112,34 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-zoom {
+  animation: zoom 20s ease-in-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-out forwards;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
